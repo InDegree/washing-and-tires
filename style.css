@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.page
+{
+    width: 100%;
+    background-color: #FAFAFA;
+}
+.demo-card-wide.mdl-card {
+  width: auto;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 352px;
+  background: url('./assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.demo-card-image.mdl-card {
+  width: auto;
+  height: 256px;
+  background: url('./assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+footer{
+  margin-top: 36px;
+}
