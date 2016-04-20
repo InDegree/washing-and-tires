@@ -4,15 +4,26 @@
     width: 100%;
     background-color: #FAFAFA;
 }
-.demo-card-wide.mdl-card {
+.washing-card-wide.mdl-card {
   width: auto;
 }
-.demo-card-wide > .mdl-card__title {
+.washing-card-wide > .mdl-card__title {
   color: #fff;
   height: 352px;
-  background: url('./assets/demos/welcome_card.jpg') center / cover;
+  background: url('./assets/demos/washing_card.jpg') center / cover;
 }
-.demo-card-wide > .mdl-card__menu {
+.washing-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.tires-card-wide.mdl-card {
+  width: auto;
+}
+.tires-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 352px;
+  background: url('./assets/demos/tires_card.jpg') center / cover;
+}
+.tires-card-wide > .mdl-card__menu {
   color: #fff;
 }
 .demo-card-image.mdl-card {
