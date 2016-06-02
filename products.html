@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washing and tires</title>
+    <link rel="stylesheet" href="./material.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="./material.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <div id="mdl-loading"><img src="assets/loading.gif" alt=""></div>
+    <div id="mdl-toaster">
+      <div class="mdl-toaster__message">
+        <div class="mdl-close-toaster">&times;</div>
+        Для заказа позвоните +7 (978) 12-34-56
+      </div>
+    </div>
+    <div class="page">
+      <!-- Always shows a header, even in smaller screens. -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Автомир</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <a class="mdl-navigation__link" href="">Автомойка</a>
+              <a class="mdl-navigation__link" href="">Шины (покрышки)</a>
+              <a class="mdl-navigation__link" href="">Полезные материалы</a>
+              <a class="mdl-navigation__link" href="">+7 (978) 123-45-67</a>
+            </nav>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Автомир</span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Автомойка</a>
+            <a class="mdl-navigation__link" href="">Шины (покрышки)</a>
+            <a class="mdl-navigation__link" href="">Полезные материалы</a>
+            <a class="mdl-navigation__link" href="">+7 (978) 123-45-67</a>
+          </nav>
+        </div>
+        <div class="mdl-content-main mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+          <div class="mdl-layout__drawer">
+
+            <div class="mdl-filters">
+              <div class="mdl-filters__title">Фильтры</div>
+
+              <div class="mdl-filters__label">Размеры</div>
+              <div class="mdl-filters__select -middle" onclick="init(this)">
+                <div class="mdl-filters__value" data-value="-1">0</div>
+                <span class="mdl-filters__arrow"></span>
+                <div class="mdl-filters__drop">
+                  <div class="mdl-filters__drop-item" data-value="-1">0</div>
+                  <div class="mdl-filters__drop-item" data-value="125">125мм</div>
+                  <div class="mdl-filters__drop-item" data-value="135">135мм</div>
+                  <div class="mdl-filters__drop-item" data-value="145">145мм</div>
+                  <div class="mdl-filters__drop-item" data-value="155">155мм</div>
+                  <div class="mdl-filters__drop-item" data-value="165">165мм</div>
+                  <div class="mdl-filters__drop-item" data-value="175">175мм</div>
+                  <div class="mdl-filters__drop-item" data-value="185">185мм</div>
+                  <div class="mdl-filters__drop-item" data-value="195">195мм</div>
+                  <div class="mdl-filters__drop-item" data-value="205">205мм</div>
+                  <div class="mdl-filters__drop-item" data-value="215">215мм</div>
+                  <div class="mdl-filters__drop-item" data-value="225">225мм</div>
+                  <div class="mdl-filters__drop-item" data-value="235">235мм</div>
+                  <div class="mdl-filters__drop-item" data-value="245">245мм</div>
+                  <div class="mdl-filters__drop-item" data-value="255">255мм</div>
+                  <div class="mdl-filters__drop-item" data-value="265">265мм</div>
+                  <div class="mdl-filters__drop-item" data-value="275">275мм</div>
+                  <div class="mdl-filters__drop-item" data-value="285">285мм</div>
+                  <div class="mdl-filters__drop-item" data-value="295">295мм</div>
+                  <div class="mdl-filters__drop-item" data-value="305">305мм</div>
+                  <div class="mdl-filters__drop-item" data-value="315">315мм</div>
+                  <div class="mdl-filters__drop-item" data-value="325">325мм</div>
+                  <div class="mdl-filters__drop-item" data-value="335">335мм</div>
+                  <div class="mdl-filters__drop-item" data-value="345">345мм</div>
+                  <div class="mdl-filters__drop-item" data-value="355">355мм</div>
+                  <div class="mdl-filters__drop-item" data-value="365">365мм</div>
+                  <div class="mdl-filters__drop-item" data-value="375">375мм</div>
+                  <div class="mdl-filters__drop-item" data-value="395">395мм</div>
+                  <div class="mdl-filters__drop-item" data-value="405">405мм</div>
+                  <div class="mdl-filters__drop-item" data-value="455">455мм</div>
+                </div>
+              </div>
+
+              <div class="mdl-filters__select -small" onclick="init(this)">
+                <div class="mdl-filters__value" data-value="-1">0</div>
+                <span class="mdl-filters__arrow"></span>
+                <div class="mdl-filters__drop">
+                  <div class="mdl-filters__drop-item" data-value="-1">0</div>
+                  <div class="mdl-filters__drop-item" data-value="25">25</div>
+                  <div class="mdl-filters__drop-item" data-value="30">30</div>
+                  <div class="mdl-filters__drop-item" data-value="35">35</div>
+                  <div class="mdl-filters__drop-item" data-value="40">40</div>
+                  <div class="mdl-filters__drop-item" data-value="45">45</div>
+                  <div class="mdl-filters__drop-item" data-value="50">50</div>
+                  <div class="mdl-filters__drop-item" data-value="55">55</div>
+                  <div class="mdl-filters__drop-item" data-value="60">60</div>
+                  <div class="mdl-filters__drop-item" data-value="65">65</div>
+                  <div class="mdl-filters__drop-item" data-value="70">70</div>
+                  <div class="mdl-filters__drop-item" data-value="75">75</div>
+                  <div class="mdl-filters__drop-item" data-value="80">80</div>
+                  <div class="mdl-filters__drop-item" data-value="85">85</div>
+                  <div class="mdl-filters__drop-item" data-value="90">90</div>
+                  <div class="mdl-filters__drop-item" data-value="95">95</div>
+                </div>
+              </div>
+
+              <div class="mdl-filters__select -middle" onclick="init(this)">
+                <div class="mdl-filters__value" data-value="-1">0</div>
+                <span class="mdl-filters__arrow"></span>
+                <div class="mdl-filters__drop">
+                  <div class="mdl-filters__drop-item" data-value="-1">0</div>
+                  <div class="mdl-filters__drop-item" data-value="12">12"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="13">13"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="14">14"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="15">15"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="16">16"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="16.5">16.5"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="17">17"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="18">18"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="19">19"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="20">20"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="21">21"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="22">22"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="23">23"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="24">24"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="26">26"(R)</div>
+                  <div class="mdl-filters__drop-item" data-value="30">30"(R)</div>
+                </div>
+              </div>
+
+              <div class="mdl-filters__label">Сезонность</div>
+              <div class="mdl-filters__select" onclick="init(this)">
+                <div class="mdl-filters__value" data-value="-1">Неважно</div>
+                <span class="mdl-filters__arrow"></span>
+                <div class="mdl-filters__drop">
+                  <div class="mdl-filters__drop-item" data-value="-1">Неважно</div>
+                  <div class="mdl-filters__drop-item" data-value="Всесезонные">Всесезонные</div>
+                  <div class="mdl-filters__drop-item" data-value="Зимние">Зимние</div>
+                  <div class="mdl-filters__drop-item" data-value="Летние">Летние</div>
+                </div>
+              </div>
+
+              <div class="mdl-filters__label">Шипы</div>
+              <div class="mdl-filters__select" onclick="init(this)">
+                <div class="mdl-filters__value" data-value="-1">Неважно</div>
+                <span class="mdl-filters__arrow"></span>
+                <div class="mdl-filters__drop">
+                  <div class="mdl-filters__drop-item" data-value="-1">Неважно</div>
+                  <div class="mdl-filters__drop-item" data-value="Есть">Есть</div>
+                  <div class="mdl-filters__drop-item" data-value="Нет">Нет</div>
+                </div>
+              </div>
+
+              <div class="mdl-filters__label">Средняя цена</div>
+              <div class="mdl-filters__select" onclick="init(this)">
+                <div class="mdl-filters__value" data-value="-1">Неважно</div>
+                <span class="mdl-filters__arrow"></span>
+                <div class="mdl-filters__drop">
+                  <div class="mdl-filters__drop-item" data-value="-1">Неважно</div>
+                  <div class="mdl-filters__drop-item" data-value="0-2000">До 2000</div>
+                  <div class="mdl-filters__drop-item" data-value="2000-4000">2000 - 4000</div>
+                  <div class="mdl-filters__drop-item" data-value="4000-6000">4000 - 6000</div>
+                  <div class="mdl-filters__drop-item" data-value="6000-8000">6000 - 8000</div>
+                  <div class="mdl-filters__drop-item" data-value="10000-12000">10000 - 12000</div>
+                  <div class="mdl-filters__drop-item" data-value="12000-14000">12000 - 14000</div>
+                  <div class="mdl-filters__drop-item" data-value="14000-16000">14000 - 16000</div>
+                  <div class="mdl-filters__drop-item" data-value="16000-18000">16000 - 18000</div>
+                  <div class="mdl-filters__drop-item" data-value="18000-20000">18000 - 20000</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <main class="mdl-layout__content">
+            <div class="page-content">
+              <div id="mdl-error__search">По вашему запросу ничего не найдено.</div>
+              <div class="mdl-overflow">
+                <div class="mdl-grid">
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span> / </span>
+                        <span class="demo__information-item">65</span>
+                        <span> / </span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Зимние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Есть</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">4500</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span>/</span>
+                        <span class="demo__information-item">65</span>
+                        <span>/</span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Летние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Нет</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">1800</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span> / </span>
+                        <span class="demo__information-item">65</span>
+                        <span> / </span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Зимние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Есть</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">4500</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span> / </span>
+                        <span class="demo__information-item">65</span>
+                        <span> / </span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Зимние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Есть</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">4500</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span>/</span>
+                        <span class="demo__information-item">65</span>
+                        <span>/</span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Летние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Нет</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">1800</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span> / </span>
+                        <span class="demo__information-item">65</span>
+                        <span> / </span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Зимние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Есть</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">4500</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span> / </span>
+                        <span class="demo__information-item">65</span>
+                        <span> / </span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Зимние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Есть</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">4500</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span>/</span>
+                        <span class="demo__information-item">65</span>
+                        <span>/</span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Летние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Нет</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">1800</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--4-col">
+                    <!-- Services card Washing -->
+                    <div class="mdl-card mdl-shadow--6dp">
+                      <img class="demo-card-image" src="./assets/demos/tires_card.jpg" alt="">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Lanvigator CatchSnow</h2>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Размеры: </span>
+                        <span class="demo__information-item">255</span>
+                        <span> / </span>
+                        <span class="demo__information-item">65</span>
+                        <span> / </span>
+                        <span class="demo__information-item">17</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Тип: </span>
+                        <span class="demo__information-item">Зимние</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Шипы: </span>
+                        <span class="demo__information-item">Есть</span>
+                      </div>
+                      <div class="mdl-card__supporting-text demo__information">
+                        <span>Цена: </span>
+                        <span class="demo__information-item">4500</span><span>руб.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </main>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
